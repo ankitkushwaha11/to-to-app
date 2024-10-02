@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 400px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.todo-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+#task-input {
+  width: 70%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#add-task-btn {
+  background-color: #00509e;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#add-task-btn:hover {
+  background-color: #003f7f;
+}
+
+#todo-list {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.todo-item {
+  background-color: #1d2b53;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  animation: fadeIn 0.5s;
+}
+
+.todo-item .task-text {
+  width: 60%;
+  text-decoration: none;
+  color: white;
+}
+
+.todo-item.completed .task-text {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+.todo-item .mark-btn, .todo-item .edit-btn, .todo-item .delete-btn {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+
+.todo-item .mark-btn {
+  background-color: #4caf50;
+}
+
+.todo-item .edit-btn {
+  background-color: #ff9800;
+}
+
+.todo-item .mark-btn:hover {
+  background-color: #45a049;
+}
+
+.todo-item .edit-btn:hover {
+  background-color: #e68a00;
+}
+
+.todo-item .delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Undo Button Styling */
+#undo-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  display: block; /* Hidden by default */
+  transition: background-color 0.3s ease;
+}
+
+#undo-btn:hover {
+  background-color: #45a049;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
